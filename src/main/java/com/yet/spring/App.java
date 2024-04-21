@@ -42,6 +42,9 @@ public class App {
 
         System.out.println("Введите номер модуля: ");
         num = in.nextInt();
+        if (num > availableModules.size() || num < 1) {
+            System.out.println("Введено некорректное число");
+        }
         availableModules.get(num - 1).execute(new File(fileName).getPath());
     }
 }
